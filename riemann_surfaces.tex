@@ -1,0 +1,421 @@
+\documentclass[a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb,enumerate,fullpage,float}
+
+\usepackage[usenames,dvipsnames,pdf]{pstricks}
+\usepackage{epsfig,microtype}
+\usepackage{hyperref}
+
+\title{Some answers to some questions}
+
+\pagestyle{plain}
+\setlength{\parindent}{0cm}
+\setlength{\parskip}{\medskipamount}
+
+% \usepackage[ngerman]{babel}
+%\usepackage[T1]{fontenc} % Trennung bei Woertern mit Umlauten
+\usepackage{amsthm}
+\usepackage{url}
+\usepackage{graphicx}
+\usepackage{comment,microtype}
+\usepackage{stmaryrd}
+
+\usepackage{pst-all}
+
+%\usepackage{tikz-cd} % for commutative diagrams, but didn't work here
+\usepackage{amscd} % for (very simple) commutative diagrams
+\usepackage[all]{xy}
+
+%\hyphenation{mani-fold}
+%\hyphenation{sub-mani-fold}
+
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\CC}{\mathbb{C}}
+\newcommand{\ZZ}{\mathbb{Z}}
+\newcommand{\NN}{\mathbb{N}}
+\newcommand{\QQ}{\mathbb{Q}}
+%\newcommand{\K}{\mathbb{K}}
+\newcommand{\PP}{\mathbb{P}}
+%\newcommand{\CP}{\mathbb{CP}}
+%\newcommand{\RP}{\mathbb{RP}}
+\newcommand {\kk} {\Bbbk}
+\newcommand{\VV}{\mathbb V}
+\newcommand{\HH}{\mathbb{H}}
+\newcommand{\DD}{\mathbb{D}}
+
+\newcommand{\mfd}{\mathfrak d}
+\newcommand{\mfD}{\mathfrak D}
+\newcommand{\mfc}{\mathfrak c}
+\newcommand{\mfU}{\mathfrak U}
+\newcommand{\mfu}{\mathfrak u}
+\newcommand{\mfB}{\mathfrak B}
+\newcommand{\mft}{\mathfrak t}
+\newcommand{\mfm}{\mathfrak m}
+\newcommand{\mfb}{\mathfrak b}
+\newcommand{\mfj}{\mathfrak j}
+\newcommand{\mfv}{\mathfrak v}
+\newcommand{\mfM}{\mathfrak M}
+\newcommand{\mfX}{\mathfrak X}
+\newcommand{\mfR}{\mathfrak R}
+\newcommand{\mfT}{\mathfrak T}
+
+\newcommand{\mcM}{\mathcal M}
+\newcommand{\mcC}{\mathcal C}
+\newcommand{\mcN}{\mathcal N}
+\newcommand{\mcX}{\mathcal X}
+\newcommand{\mcR}{\mathcal R}
+\newcommand{\mcO}{\mathcal O}
+\newcommand{\mcA}{\mathcal A}
+\newcommand{\mcF}{\mathcal F}
+\newcommand{\mcE}{\mathcal E}
+\newcommand{\mcU}{\mathcal U}
+\newcommand{\mcJ}{\mathcal J}
+\newcommand{\mcT}{\mathcal T}
+\newcommand{\mcD}{\mathcal D}
+
+
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\dvol}{\mathrm{vol}_{\Sigma}}
+\newcommand{\ddd}{{(d,d')}}
+\newcommand{\ddv}{{2d+2d'-\nu}}
+\newcommand{\ddvm}{{-2d-2d'-\nu}}
+\newcommand{\PtP}{{\PP^1 \times \PP^1}}
+\newcommand{\ii}{\mathrm{i}}
+\newcommand{\si}{\Sigma}
+\newcommand{\del}{\partial}
+\newcommand{\db}{\overline{\partial}}
+\newcommand{\cin}{C^{\infty}}
+\newcommand{\lra}{\longrightarrow}
+\newcommand{\ol}[1]{\overline{#1}}
+\newcommand{\wt}[1]{\widetilde{#1}}
+\newcommand{\ddt}{\frac{\dd}{\dd t}_{|_{t=0}}}
+\newcommand{\hyp}{\text{hyp}}
+
+
+\newcommand{\id}{\operatorname{id}}
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\Mult}{\operatorname{Mult}}
+\newcommand{\Mono}{\operatorname{Mono}}
+\newcommand{\Pic}{\operatorname{Pic}}
+\newcommand{\Init}{\operatorname{Init}}
+\newcommand{\Supp}{\operatorname{Supp}}
+\newcommand{\Sing}{\operatorname{Sing}}
+\newcommand{\Trees}{\operatorname{Trees}}
+\newcommand{\Spec}{\operatorname{Spec}}
+\newcommand{\Spf}{\operatorname{Spf}}
+\newcommand{\Val}{\operatorname{Val}}
+\newcommand{\Int}{\operatorname{Int}}
+\newcommand{\Asym}{\operatorname{Asym}}
+\newcommand{\Interstices}{\operatorname{Interstices}}
+\newcommand{\Joints}{\operatorname{Joints}}
+\newcommand{\Opp}{\operatorname{Opp}}
+\newcommand{\dlog}{\operatorname{dlog}}
+\newcommand{\Aut}{\operatorname{Aut}}
+\newcommand{\Log}{\operatorname{Log}}
+\newcommand{\ts}{\mathrm{T}}
+\newcommand{\ind}{\operatorname{index}}
+\newcommand{\Sym}{\operatorname{Sym}}
+%\newcommand{\dim}{\operatorname{dim}}
+%\newcommand{\ker}{\operatorname{ker}}
+\newcommand{\coker}{\operatorname{coker}}
+\newcommand{\End}{\operatorname{End}}
+%\newcommand{\Aut}{\operatorname{Aut}}
+\newcommand{\image}{\operatorname{Im}}
+\newcommand{\grapho}{\operatorname{graph}}
+\newcommand{\Trace}{\operatorname{Tr}}
+\newcommand{\ver}{\operatorname{ver}}
+\newcommand{\area}{\operatorname{area}}
+\newcommand{\diff}{\operatorname{Diff}}
+\newcommand{\arc}{\operatorname{arc}}
+\newcommand{\ord}{\operatorname{ord}}
+\newcommand{\tr}{\operatorname{tr}}
+
+\renewcommand{\Re}{\operatorname{Re}}
+\renewcommand{\Im}{\operatorname{Im}}
+
+
+\newcommand{\out}{\mathrm{out}}
+\newcommand{\disk}{\mathrm{disk}}
+\newcommand{\pt}{\mathrm{pt}}
+\newcommand{\trop}{\mathrm{trop}}
+\newcommand{\prim}{\mathrm{prim}}
+\newcommand{\ev}{\mathrm{ev}}
+\newcommand{\GL}{\mathrm{GL}}
+\newcommand{\PSL}{\mathrm{PSL}}
+\newcommand{\PSU}{\mathrm{PSU}}
+\newcommand{\Iso}{\mathrm{Iso}^+}
+\newcommand{\SO}{\mathrm{SO}}
+
+
+\newtheorem*{thm}{Theorem}
+\newtheorem*{prop}{Proposition}
+\newtheorem*{lem}{Lemma}
+\newtheorem*{cor}{Corollary}
+
+\theoremstyle{definition}
+\newtheorem*{definition}{Definition}
+
+\theoremstyle{remark}
+\newtheorem*{rmk}{Remark}
+
+\theoremstyle{remark}
+\newtheorem*{choice}{Choice}
+
+\everymath{\displaystyle}
+
+\begin{document}
+
+\maketitle
+
+\begin{rmk}
+  All statements are for closed Riemann surfaces. Note that the corresponding statement for compact Riemann surfaces with boundary (as we needed in the seminar) usually follows analogously or by doubling the surface along the boundary.
+\end{rmk}
+
+\section*{Stable Riemann Surfaces}
+
+\begin{rmk}
+The following is taken from the original source by Hurwitz (1888) and modern expositions such as Lewittes (1963) and Farkas--Kra (1992). Some proofs need the introduction of gap sequences at the Weierstraß points which takes up some space, so I skipped the proofs. If you are interested, have a look at Farkas--Kra.
+\end{rmk}
+
+\begin{definition}
+Let $X$ be a closed Riemann surface of genus $g\geq 1$. Then the following are equivalent for a point $p\in X$:
+
+\begin{itemize}
+\item For a basis $\omega_1,\ldots,\omega_g$ of $H^{1,0}(X)$ and local coordinates $(U,z)$ around $p$ such that $\omega_i=f_i\dd z_i$ on $U$, we have that the \emph{Wronski determinant} $W(\omega_1,\ldots,\omega_n):=\det(f^{(j)}_i)_{i,j+1\in\{1,\ldots,g\}}$ at $p$ is zero.
+\item There is a non-constant meromorphic map from $X$ to $\CC P^1$ such that it has a pole of order less than or equal to $g$ at $p$ and is holomorphic otherwise.
+\end{itemize}
+
+Such a point $p$ is called a \emph{Weierstra\ss\ point}. A Riemann sphere has no Weierstra\ss\ points by definition. The mutliplicity of a Weierstraß point is the multiplicity of the zero of the Wronski determinant at $p$ or the smallest order of a pole of a suitable function in the second definition.
+\end{definition}
+
+\begin{thm}[Hurwitz, 1888]
+On a Riemann surface of genus $g$ the number $W$ of Weierstraß points satisfies $2g+2\leq W\leq g^3-g$. The upper bound is in fact equal to the total sum of Weierstraß points including their multiplicity (i.e.\ the oder of the zero above, or some number calculated from the so-called gap sequence at the point).
+\end{thm}
+
+\begin{definition}
+The following statements for a closed Riemann surface $X$ with genus $g\geq 2$ are equivalent:
+\begin{itemize}
+\item There exists a holomorphic map from $X$ to $\CC P^1$ with only two poles counting multiplicity.
+\item $X$ is a branched covering over the Riemann sphere of degree two (and thus only simple branching points)
+\item The surface $X$ has exactly $2g+2$ Weierstraß points.
+\item There exists exactly one (biholomorphic) involution $J$ which fixes $2g+2$ points.
+\end{itemize}
+Such a Riemann surface $X$ is called hyperelliptic.
+\end{definition}
+
+\begin{prop}
+  On a hyperelliptic surface $X$ of genus $g\geq 2$ the meromorphic function with only two poles is unique up to fractional linear transformations. Furthermore, the branch points of this function are precisely the Weierstraß points.
+\end{prop}
+
+\begin{rmk}
+  Some of the equivalences are only true for surfaces of genus greater than or equalt to two, in particular the uniqueness of the involution $J$ in the last statement. This involution corresponds to the sheet change of the branched covering over the Riemann sphere. The uniqueness up to fractional linear transformations is used for proving some of the equivalences in the definition because knowing that a Möbius transformation has many fixed points implies that it is the identity.
+\end{rmk}
+
+\begin{thm}
+  On every Riemann surface $X$ with genus $g$ and for any point $a\in X$ there is a non-constant meromorphic function which has a pole of order $g+1$ in $a$ and is holomorphic everywhere else.
+\end{thm}
+
+\begin{proof}
+  For $D=(g+1)a$ we have by Riemann--Hurwitz $\dim H^0(X,\mcO_D)\geq 1-g+\deg D=2$. Thus there exists a non-constant function $f\in H^0(X,\mcO_D)$. Here, $\mcO_D(U)=\{f\in\mcM(U)\mid\ord_x(f)\geq-D(x)\forall x\in U\}$ is the sheaf of meromorphic functions $f$ such that $(f)\geq-D$.
+\end{proof}
+
+\begin{lem}
+ Suppose $X$ is a hyperelliptic surface of genus $g\geq 2$ and $T\in\Aut(X)$ with $T\neq\id,J$. Then $T$ has at most four fixed points.
+\end{lem}
+
+\begin{proof}
+  Let $f$ be the meromorphic function $f:X\lra\CC P^1$ with two poles. Then $f\circ T$ is also a function with two poles. By the uniqueness above there is a Möbius transformation $A\neq1$ such that
+  \begin{equation*}
+    f\circ T=A\circ f.
+  \end{equation*}
+If $p\in X$ is a fixed point of $T$, we have $f(p)=f(T(p))=A(f(p))$, implying that $f(p)$ is a fixed point of $A$. But Möbius transformations can have at most two fixed points. Since $A$ is only defined by $T$ up to multiplication with minus one, $T$ can have at most four fixed points.
+\end{proof}
+
+\begin{thm}[Hurwitz, 1888]
+  If $X$ is a closed Riemann surface of genus $g\geq 2$, then it has only finitely many automorphisms, i.e.\ biholomorphisms from $X$ to itself.
+\end{thm}
+
+\begin{proof}
+  Suppose $h:X\lra X$ is a biholomorphism. Then it maps Weierstraß points to Weierstraß points because of the second definition above by pulling back the function via $h$. Enumerating the Weierstraß points we obtain a representation $\Aut(X)\lra\Sym(\omega)$, where $\omega$ denotes the number of Weierstraß points on $X$ and $\Sym(\omega)$ the symmetric group on $\omega$ elements. Since $\Sym(\omega)$ is a finite group it is enough to show that the kernel of the representation is finite.
+
+
+Suppose that $h\neq\id$. Then there exists a point $p\in X$ which is not fixed by $h$ and is no Weierstraß point. Then, by the above, there exists a function $f:X\lra\CC$ which has a pole of order $g+1$ at $p$ and is holomorphic otherwise. Now define $f':=f-f\circ h$. Then this function has a pole of order $g+1$ at $p$ and at $h(p)\neq p$ and is holomorphic otherwise. Thus $f'$ is not constant. Now, a fixed point of $h$ gives a zero of $f'$ which in turn gives the following upper estimate for the number of fixed points of $h$
+\begin{equation*}
+  \#\{\text{f.p. of }h\}\leq\#\{\text{zeros of }f'\}=\#\{\text{poles of }f'\} \leq 2g+2,
+\end{equation*}
+where we have counted with multiplicity.
+
+
+There are two cases. First, $X$ might be not hyperelliptic. Then $\omega>2g+2$. So, if $h:X\lra X$ is a non-constant biholomorphism in the kernel of the representation on the $\omega$ Weierstraß points it has $\omega$ fixed points, but we have just shown that in fact it can have only less than or equal to $2g+2$. Thus the representation is faithful and there are only finitely many automorphisms.
+
+
+Secondly, suppose that $X$ is hyperelliptic. Then an element in the kernel of the representation fixes the $2g+2$ Weierstraß points. Thus, by the above lemma ($4<2g+2$ for $g\geq2$), there are only two elements in the kernel, the identity map and $J$.
+
+In both cases there are only finitely many automorphisms.
+\end{proof}
+
+\begin{thm}[Hurwitz, 1888]
+  A surface $X$ of genus $g\geq2$ has at most $84(g-1)$ automorphisms.
+\end{thm}
+
+\begin{proof}
+  Consider $X\lra X/\Aut(X)$. This is a branched covering of $X$ over the Riemann surface $X/\Aut(X)$ of degree $|\Aut(X)|$ and the branched points are the fixed points of elements in $\Aut(X)$ with order given by the order of the stabilizer subgroup minus one. The genus of $X/\Aut(X)$ is bigger than or equal to $g$. Now use Riemann--Hurwitz and consider one billion cases to prove the bound from the theorem.
+\end{proof}
+
+\section*{Infinite-dimensional Manifolds and Bundles}
+
+\section*{Integrability of Two-Dimensional Almost Complex Structures}
+
+So I guess I exaggerated somewhat. Turns out the calculation is a bit longer. The reason the calculation works in dimension two is somehow that the dimension is small enough to have tractable equations. Note that there are more clever ways of showing integrability in dimension two directly, for example by proving the Riemann mapping theorem or choosing oriented conformal coordinates and observing that the transition functions are automatically holomorph.
+
+\begin{thm}
+  The Nijenhuis tensor vanishes in dimension two.
+\end{thm}
+
+\begin{proof}
+  This is a local statement, so choose coordinates and do all calculations in those. Note that we have the following statements:
+  \begin{enumerate}
+  \item The components of the Nijenhuis tensor are $-(N_J)_{ij}^k=J_i^m\del_mJ_j^k-J_j^m\del_mJ_i^k-J_m^k(\del_iJ_j^m-\del_jJ_i^m)$. Convince yourself about that.
+  \item $J_a^bJ_b^c=-\delta_a^c$
+  \item $J_b^c\del_dJ_a^b+J_a^b\del_dJ_b^c=0$
+  \end{enumerate}
+Here we obviously use Einstein summation convention. Notice that $N_J$ is antisymmetric in its arguments (here the components $i$ and $j$) which means that we only need to compute $(N_J)_{12}^k$ for arbitrary $k$. Now applying (3) to the last two summands in (1) for $c=k$, $b=m$, $d=i=1$ and $d=j=2$ we obtain
+\begin{align*}
+  -(N_J)_{12}^k&=J_1^m\del_mJ_2^k-J_2^m\del_mJ_1^k+J_2^m\del_1J_m^k-J_1^m\del_2J_m^k\\
+  &=J_1^1\del_1J_2^k+J_1^2\del_2J_2^k-J_2^1\del_1J_1^k-J_2^2\del_2J_1^k+J_2^1\del_1J_1^k+J_2^2\del_1J_2^k-J_1^1\del_2J_1^k-J_1^2\del_2J_2^k\\
+  &=(J_1^1+J_2^2)\del_1J_2^k-(J_1^1+J_2^2)\del_2J_1^k\\
+  &=(J_1^1+J_2^2)(\del_1J_2^k-\del_2J_1^k).
+\end{align*}
+Writing (2) explicitly for $a=2$ and $c=1$ and vice versa we see $(J^1_1+J_2^2)J_2^1=0=(J_1^1+J_2^2)J_1^2$. If $J_1^1+J_2^2=0$ we are done. Suppose instead $J_2^1=J_1^2=0$. Then we can look at (2) for $a=c=1$ and obtain $(J_1^1)^2+J_2^1J_1^2=(J_1^1)^2=-1$ which is impossible since $J_1^1$ is real-valued. This statement also comes from the fact that the trace of a real matrix is the same over $\CC$ and $\RR$, thus we have $\tr J=+\ii-\ii=0$.
+\end{proof}
+
+\section*{Riemann Surfaces and Group Theory}
+
+\begin{thm}
+On a closed oriented surface $X$ with genus $g\geq 2$ there is a one-to-one correspondence between 
+\begin{itemize}
+\item Almost complex structures $J$ (which are all integrable by the last section) inducing the given orientation,
+\item Conformal equivalence classes of metrics $[g]$ and
+\item Hyperbolic metrics $g_{\text{hyp}}$, i.e.\ metrics whose sectional curvature is $-1$.
+\end{itemize}
+\end{thm}
+
+\begin{proof}
+  The equivalence of the first two is easy, because you can pick locally a basis vector field $v$ and define a metric by requiring that $(v,Jv)$ is orthogonal and positively oriented. A local computation shows that this leaves a conformal factor as a degree of freedom.  In order to obtain a metric you can cover $X$ by finitely many charts and define $g$ inductively. In each step you choose a local trivialization and extend the metric. This then defines a conformal equivalence class. For the other direction, just choose $J$ to be rotation by $\frac{\pi}{2}$ in the given orientation, which is well defined for conformally equivalent metrics.
+\marginpar{Correct definition?}
+
+Given a hyperbolic metric you can just take its conformal equivalence class. If you are given a class $[g]$ then you can ask whether there is a function $f:X\lra\RR$ such that $K(fg)=-1$, where $K$ is the sectional curvature. This PDE has a unique solution.
+\end{proof}
+
+\begin{thm}
+  \marginpar{Simply connected hyperbolic space}
+\end{thm}
+
+\begin{prop}
+  There exist at least two useful models for hyperbolic space with the following properties:
+  \begin{itemize}
+  \item The \emph{upper half-plane model} $\HH=\{z\in\CC\mid|z|<1\}$ with metric $\frac{1}{y^2}(\dd x^2+\dd y^2)$, whose orientation preserving isometries are given by $\PSL(2,\RR)$. This group consists of $\bigl(\begin{smallmatrix} a&b\\ c&d \end{smallmatrix} \bigr)$ with $a,b,c,d\in\RR$ satisfying $ad-bc=1$ and acting on $\HH$ via $z\mapsto\frac{az+b}{cz+d}$.
+  \item The \emph{Poincaré disc model} $\DD=\{z\in\CC\mid|z|<1\}$ with metric $\frac{4|\dd z|^2}{(1-|z|^2)^2}$, whose orientation preserving isometries are given by $\PSU_{1,1}(\CC)$. This group consists of $\bigl(\begin{smallmatrix} a&b\\ \wt{b}&\wt{a} \end{smallmatrix} \bigr)$ with $a,b\in\CC$ satisfying $|a|^2-|b|^2=1$ and acting on $\DD$ via $z\mapsto\frac{az+b}{\wt{b}z+\wt{a}}$.
+  \end{itemize}
+\end{prop}
+
+\begin{rmk}
+  The isometry between the two models is given by
+  \begin{align*}
+    \HH&\lra\DD\\
+    z&\longmapsto\frac{z-\ii}{z+\ii}.
+  \end{align*}
+  In particular you can deduce $\Aut(\DD)$ from $\Aut(\HH)$ by conjugating with this map, i.e.\ $\PSL(2,\RR)\cong\PSU_{1,1}(\CC)$.  Also note that in two dimensions an orientation preserving conformal bijection is a biholomorphism. Thus, $\Aut(\HH)$ and $\Aut(\CC)$ can be seen as the group of biholomorphisms, conformal automorphisms or orientation preserving isometries of the respective hyperbolic metrics. Furthermore, notice that there are also more general Möbius transformations such as $\PSL(2,\CC)$ acting on $\CC P^1\cong \CC\cup\infty$ in the same way. These are in fact all biholomorphisms, meaning $\Aut(\CC P^1)\cong\PSL(2,\CC)$. Then, there is also the case of flat geometry, where automorphisms of the plane are given by affine translations, i.e.\ $\Aut(\CC)\simeq\{\bigl(\begin{smallmatrix} a&b\\ 0&1 \end{smallmatrix} \bigr)\mid a,b\in\CC, a\neq 0\}$.
+\end{rmk}
+
+\begin{definition}
+  A \emph{Fuchsian group} is a discrete subgroup of $\PSL(2,\RR)$, a \emph{Kleinian group} is a discrete subgroup of $\PSL(2,\CC)$ and a \emph{Schottky group} is a Kleinian group which can be generated by Möbius transformations mapping the outside of $g$ Jordan curves on the Riemann sphere onto the inside of $g$ Jordan curves, where the curves are disjoint and have disjoint interiors.
+\end{definition}
+
+\begin{rmk}
+  We will not need Schottky groups, however they are included because they sometimes pop up in this context. Kleinian groups are discrete subgroups of the conformal transformations of the Riemann sphere but also of the orientation preserving isometries of three-dimensional (!) hyperbolic space. Thus, if you are interested in hyperbolic three-folds you will encounter those. In particular in the work of Thurston.
+\end{rmk}
+
+\begin{thm}
+  Any closed oriented hyperbolic surface is isometric to $\HH/\Gamma$, where $\Gamma\subset\Iso(\HH)$ is a torsion-free Fuchsian group.
+\end{thm}
+
+\begin{proof}
+  
+\end{proof}
+
+\begin{rmk}
+  The converse holds as well.
+\end{rmk}
+
+\begin{definition}
+  For $A\in\PSL(2,\RR)$ define $D(A)=\inf_{z\in\HH} d_{\hyp}(z,\alpha(z))$.
+\end{definition}
+
+\begin{prop}
+  There are three types of elements $A\in\PSL(2,\RR)$ with the following properties:
+  \begin{itemize}
+  \item \emph{Elliptic}: $|\tr (A)|<2$, it is conjugate to a rotation in $\SO(2)$ on $\DD$, it has no real eigenvalues, $D(A)=0$ and its infimum is realized in $\HH$, it has exactly one fixed point, 
+  \item \emph{Parabolic}: $|\tr(A)|=2$, it is conjugate to a shear mapping $z\mapsto z\pm1$ in $\HH$, it has one real double eigenvalue, $D(A)=0$ but its infimum is not realized in $\HH$, it has no fixed points 
+  \item \emph{Hyperbolic}: $|\tr(A)|>2$, it is conjugate to a ``squeeze mapping'', it has two real eigenvalues, $D(A)>0$ and its infimum is realized, it preserves a hyperbolic geodesic and it has precisely two fixed points on the boundary of $\DD$ or $\RR\cup\infty$, respectively.
+  \end{itemize}
+\end{prop}
+
+\begin{rmk}
+  Note that the product of two elements of the same kind is not necessarily of the same type again. However, elliptic subgroups are subgoups of $\PSL(2,\RR)$ whose elements are all elliptic or the identity, etc. The preserved hyperbolic geodesic in the third case is in fact the unique geodesic between the two fixed points on the boundary. Furthermore, the squeeze mapping is hard to describe in our two models. There are a few more models for hyperbolic space (hyperboloid, Klein model, band model, etc.). In the latter, hyperbolic automorphisms appear as translations. See \href{http://bulatov.org/math/1001/}{http://bulatov.org/math/1001/} for some nice pictures.
+\end{rmk}
+
+Now, we will relate geometric properties of $\HH/\Gamma$ to properties of the torsionless Fuchsian group $\Gamma$.
+
+\subsection*{Automorphisms}
+
+\subsection*{Geodesics}
+
+\subsection*{Boundaries and Cusps}
+
+\section*{Homotopic Automorphisms}
+
+\begin{lem}
+  Let $X$ be a compact Riemann surface, possibly with boundary, such that $\chi(X)<0$. Then there exists no non-trivial biholomorphism $u:X\lra X$ homotopic to the identity.
+\end{lem}
+
+\begin{proof}
+  Assume for the moment that $u(z)=z$ only at finitely many points $z\in X$. Since $u\sim\id$, we have $u_*=\id:H_*(X,\QQ)\lra H_*(X,\QQ)$ and thus $\Trace u_*|_{H_k(X,\QQ)}=\dim H_k(X,\QQ)$. Using the Lefshetz fixed point formula we see
+
+  \begin{equation*}
+    \sum_{z|u(z)=z}\ind_z u=\sum_{i=0}^2(-1)^i\Trace u_*|_{H_i(X,\QQ)}=\sum_{i=0}^2(-1)^i\dim H_i(X,\QQ)=\chi(X)<0.
+  \end{equation*}
+
+  However, because $u$ is holomorphic, all indices $\ind_z u:=\grapho(u)\cap\Delta$ are non-negative. Here, $\grapho(u)=\{(x,y)|y=u(x)\}\subset X\times X$ and $\Delta\subset X\times X$ is the diagonal. The reason is that the subspaces are complex, therefore (compatibly) orientable and you can reorder their underlying real basis vectors in pairs without picking up signs. Therefore, we have a contradiction and no such map can exist.
+
+  It remains to exclude the case of a map with infinitely many fixed points $z\in S$. Because $X$ is compact, $S$ has an accumulation point. Thus $u=\id$ on a set with accumulation point, implying by the unique continuation theorem for holomorphic functions that $u=\id$ on the whole $X$, which we have excluded in the assumption.
+\end{proof}
+
+\begin{cor}
+Let $X$ be a compact Riemann surface, possibly with boundary, such that $\chi(X)<0$. In each homotopy class of maps from $X$ to itself exists at most one biholomorphism.
+\end{cor}
+
+\begin{proof}
+  Suppose there exist $u_1$ and $u_2$ biholomorphisms from $X$ to itself which are homotopic. Then $u_1\circ u_2^{-1}$ is a biholomorphism and homotopic to the identity (Choose $\wt{H}(t,p):=H(t,u_2^{-1}(p))$ if $H:[0,1]\times X\lra X$ is a homotopy between $u_1$ and $u_2$). But then $u_1\circ u_2^{-1}=\id$.
+\end{proof}
+
+\section*{Connectedness of Spaces of Maps}
+
+Recall my definition of the space of smooth maps $\si_{g,k}\lra X_{h,n}$ with boundary conditions.
+
+\begin{definition}
+  $u\in\cin_{\del}(\si,X)$ if and only if $u:\si\lra X$ is a smooth map, $u(\del\si_i)=\del X_{\nu(i)}$, $\deg u =d$ and $\deg u|_{\del\si_i}=l_i\qquad\forall i\in\{1,\ldots,k\}$. Here, $d,\nu$ and $\{l_1,\ldots,l_k\}$ are given such that $\sum_{i\mid \nu(i)=j}l_i=d\qquad\forall j\in\{1,\ldots,n\}$ and $2-2g-k=d(2-2h-n)$. 
+\end{definition}
+
+In the talk I kind of claimed that this space is connected. My idea was that those boundary conditions imply which homology class this map has to live in which in turn fixes the homotopy class. Unfortunately there are many problems, one of them that this is just plain wrong.
+
+Assume that $\cin_{\del}(\si,X)$ is a Fr\`echet manifold, in particular it is equipped with the compact-open topology which, since $\si$ is compact and $X$  is metric, is indeed metrizable and is equivalent to the topology of uniform convergence. Then it is locally path-connected as vector spaces are locally path-connected. Therefore, connectedness is equivalent to path-connectedness. Since $[0,1]$, $\si$ and $X$ are topological manifolds, they are compactly generated Hausdorff and thus we have the ``usual'' duality $\Hom([0,1],\Hom(\si,X))\cong \Hom([0,1]\times\si,X)$ if we equip $\Hom(\si,X)$ with the compat-open topology. This means that we obtain a homotopy of maps $H:[0,1]\times \si\lra X$ from a path of maps in $\cin_{\del}(\si,X)$. However, we have already seen in the last section that homotopic automorphisms are in fact identical. Thus we can pick some surface $X$ with a non-trivial automorphism to see that the corresponding space $\cin_{\del}(X,X)$ with $\deg=1$ cannot be path-connected and therefore neither connected.
+
+There are various explanations for this. One is that fixing the behaviour of a map between surfaces on the boundary does not say anything about (topological) interior behaviour as it can still act in various ways on $H^{1}(X)$. It turns out that this is much worse in actual Gromov--Witten theory. There you only fix the homology class of the image (not even the (relative?) homology class represented by the map). Since homological surfaces can be represented by pretty wild subsets (or even very different immersed surfaces) there is no reason to expect that images having homological images need to be homotopic. In Gromov--Witten theory you only need to fix the class of the image because its pairing with the symplectic class enters in the dimension formula, so you are only interested that the dimension is everywhere the same but you do not care about connectedness. However, it might actually be true that relative homological maps are homotopic in my surface case if you consider the relative class represented by the map itself, but fixing the boundary conditions still does not say anything about the behaviour on ``interior'' generators of $H^1(\si,\del\si)$.
+
+\marginpar{Nonsense? Relative Homology class?}
+
+\section*{Hyperbolic and complex structures on surfaces with boundary}
+
+\end{document}
